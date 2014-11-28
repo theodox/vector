@@ -22,7 +22,7 @@ or assigning explicitly.
 
        example = Vector2(x = 1.0, y=2.0)
 
-You can create integer or float versions by providing integers or floats at start (the math will follow the usual python float/vector rules).
+You can create integer or float versions by providing integers or floats at start (the math will follow the usual python float/vector rules).  `VectorN` classes are _tuples_, so they are immutable - you cannot assign to their values after they are created.
 
 ####addition:
 
