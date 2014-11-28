@@ -3,13 +3,26 @@ vector
 
 A simple vector math module, suitable for use in Maya python for those who want to avoid Pymel.  
 
-Vectors are derived from `namedtuples` so they are immutable.  There are 3 base vector classes:
+There are 3 base vector classes:
 
 - **Vector2** is a 2-d XY vector.
 - **Vector3** is a 3-d XYZ vector.
 - **Vector4** is a 4-d XYZW vector.
 
-They all provide the follwing operations:
+Typical usage would be:
+
+    v = Vector2 ( 1.0, 0.0)
+
+or using *args on existting iterable:
+
+    example = [1.0., 0.0] # any iterable with 2 items
+    v = Vector2(*example)
+
+or assigning explicitly.
+
+       example = Vector2(x = 1.0, y=2.0)
+
+You can create integer or float versions by providing integers or floats at start (the math will follow the usual python float/vector rules).
 
 ####addition:
 
