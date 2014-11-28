@@ -5,9 +5,9 @@ A simple vector math module, suitable for use in Maya python for those who want 
 
 Vectors are derived from `namedtuples` so they are immutable.  There are 3 base vector classes:
 
-**Vector2** is a 2-d XY vector
-**Vector3** is a 3-d XYZ vector
-**Vector4** is a 4-d XYZW vector
+- **Vector2** is a 2-d XY vector.
+- **Vector3** is a 3-d XYZ vector.
+- **Vector4** is a 4-d XYZW vector.
 
 They all provide the follwing operations:
 
