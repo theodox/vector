@@ -11,17 +11,17 @@ Vectors are derived from `namedtuples` so they are immutable.  There are 3 base 
 
 They all provide the follwing operations:
 
-###addition:
+####addition:
 
     Vector2(1,0) + Vector2(0, 1)
     # Vector2(1,1)
     
-###subtraction:
+####subtraction:
 
     Vector2(1,1) - Vector2(0, 1)
     # Vector2(1,0)
     
-###multiplication:
+####multiplication:
 
 if the second argument is a vector, do a piecewise vector multiplication: 
 
@@ -33,7 +33,7 @@ If the second argument is a single number, do a scalar multiplication:
   Vector2(1,1) * 3
   # Vector2(3,3)
 
-###multiplication:
+####multiplication:
 
 if the second argument is a vector, do a piecewise vector division: 
 
@@ -45,19 +45,19 @@ If the second argument is a single number, do a scalar division:
   Vector2(4, 4)  / 2
   # Vector2(2,2)
 
-###length:
+####length():
 
 Returns the length of a vector:
   Vector2(3, 4).length()
   # 5
 
-###normalized:
+####normalized():
 
 Returns a normalized copy of the vector:
   Vector2(3, 4).normalized()
   # Vector2(.8, .6)
   
-###dot:
+####dot():
 Returns the [dot product](http://techartsurvival.blogspot.com/2014/11/bagels-and-coffee-or-vector-dot-product.html) of two vectors:
 
    Vector2(1,0).dot(Vector2(.707, .707))
