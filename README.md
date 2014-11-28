@@ -53,15 +53,16 @@ Returns the length of a vector:
 
 ####normalized():
 
-Returns a normalized copy of the vector:
+Returns a normalized copy of the vector.
+
     Vector2(3, 4).normalized()
     # Vector2(.8, .6)
   
 ####dot():
 Returns the [dot product](http://techartsurvival.blogspot.com/2014/11/bagels-and-coffee-or-vector-dot-product.html) of two vectors:
 
-   Vector2(1,0).dot(Vector2(.707, .707))
-   # .707
+    Vector2(1,0).dot(Vector2(.707, .707))
+    # .707
    
  
 
