@@ -48,6 +48,7 @@ If the second argument is a single number, do a scalar division:
 ####length():
 
 Returns the length of a vector:
+
     Vector2(3, 4).length()
     # 5
 
