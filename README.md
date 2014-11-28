@@ -27,36 +27,36 @@ You can create integer or float versions by providing integers or floats at star
 ####addition:
 
     Vector2(1,0) + Vector2(0, 1)
-    # Vector2(1,1)
+    # Vector2(x=1,y=1)
     
 ####subtraction:
 
     Vector2(1,1) - Vector2(0, 1)
-    # Vector2(1,0)
+    # Vector2(x=1, y=0)
     
 ####multiplication:
 
 if the second argument is a vector, do a piecewise vector multiplication: 
 
     Vector2(1,1) * Vector2(2, 3)
-    # Vector2(2,3)
+    # Vector2(x=2, y=3)
 
 If the second argument is a single number, do a scalar multiplication:
 
     Vector2(1,1) * 3
-    # Vector2(3,3)
+    # Vector2(x=3 ,y=3)
 
 ####multiplication:
 
 if the second argument is a vector, do a piecewise vector division: 
 
-    Vector2(2,4) / Vector2(4, 2)
-    # Vector2(.5,2)
+    Vector2(2.0, 4.0) / Vector2(4, 2)
+    # Vector2(x = .5, y=2.0)
 
 If the second argument is a single number, do a scalar division:
 
-    Vector2(4, 4)  / 2
-    # Vector2(2,2)
+    Vector2(4.0, 4.0)  / 2
+    # Vector2(x=2.0, y=2.0)
 
 ####length():
 
