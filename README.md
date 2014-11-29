@@ -10,7 +10,7 @@ The module is a single python file (`vector.py`)  which depends only on the stan
     from Vector import Vector2, Vector3
 
 
-Functionality
+functionality
 =============
 There are 3 base vector classes:
 
