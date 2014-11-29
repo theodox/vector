@@ -1,8 +1,17 @@
 vector
 ======
 
-A simple vector math module, suitable for use in Maya python for those who want to avoid Pymel.  
+A simple vector math module, suitable for use in Maya python for those who want to avoid Pymel.  Technically it will work for any vector math but I'd recommend using a C-based alternative (such as [numpy](http://www.numpy.org/) for any application with hard-core performance constraints.
 
+installation
+===========
+The module is a single python file (`vector.py`)  which depends only on the standard library. Just drop it into any folder on your python path (either site-packages or another  and import it:
+
+    from Vector import Vector2, Vector3
+
+
+Functionality
+=============
 There are 3 base vector classes:
 
 - **Vector2** is a 2-d XY vector.
