@@ -83,6 +83,8 @@ class Vector2(Vector, xy):
     or
 
        example = Vector2(x = 1.0, y=2.0)
+
+    Supports all base iterable functions (slicing, for loops, any(), etc)
     """
     pass
 
@@ -102,6 +104,8 @@ class Vector3(Vector, xyz):
     or
 
        example = Vector3(x = 1.0, y=2.0, z = 3.0)
+
+    Supports all base iterable functions (slicing, for loops, any(), etc)
     """
     pass
 
@@ -122,5 +126,50 @@ class Vector4(Vector, xyzw):
     or explicitly
 
        example = Vector4(x = 1.0, y=2.0, z = 3.0, w= 0.0)
+
+    Supports all base iterable functions (slicing, for loops, any(), etc)
     """
     pass
+
+
+class MVector(Vector, list):
+    """
+    A mutable version of the base Vector. This allows you to modify vector contents in place.
+
+    MVector derives from list so it supp
+
+
+    Supports all base iterable functions (slicing, for loops, any(), etc). However it does NOT support append(), to keep the width of the vector to what it was at creation time.
+    """
+
+    def __init__(self, *args, **kwargs):
+        if len(args) == 1:
+            args = args[0]
+        list.__init__(self, args)
+        for k in 'xyzw':
+            if k in kwargs:
+                self.__setattr__(k, kwargs.pop(k))
+
+    def __getattr__(self, key):
+        try:
+            return self['xyzw'.index(key)]
+        except KeyError:
+            return self.__getattribute__(key)
+
+    def __setattr__(self, key, value):
+        if not key in 'xyzw':
+            self.__setattribute__(key, value)
+            return
+        idx = 'xyzw'.index(key)
+        self.__setitem__(idx, value)
+
+
+    def __setitem__(self, key, value):
+        while len(self) <= key:
+            super(MVector, self).append(0.0)
+        list.__setitem__(self, key, value)
+
+    def append(self, *args):
+        raise NotImplementedError(
+            "MVector does not support appneding: create a new vector with the correct width instead")
+
