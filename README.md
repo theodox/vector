@@ -55,7 +55,7 @@ If the second argument is a single number, do a scalar multiplication:
     Vector2(1,1) * 3
     # Vector2(x=3 ,y=3)
 
-####multiplication:
+####division
 
 if the second argument is a vector, do a piecewise vector division: 
 
